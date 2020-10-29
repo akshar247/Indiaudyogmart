@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/rl_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/black">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_30dp"
+                android:background="@color/black"
+                android:src="@drawable/ic_white_back_arrow" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/transactions"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:text="Settings"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_actionbar"
+        >
+        <TextView
+            android:id="@+id/notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:text="@string/notificatio">
+
+        </TextView>
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notification"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightgray1">
+            <TextView
+                android:id="@+id/new_updates"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:text="@string/new_updates">
+
+            </TextView>
+            <Switch
+                android:id="@+id/new_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingRight="20dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white">
+
+            </Switch>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_1"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightgray1">
+            <TextView
+                android:id="@+id/product_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="11dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:text="@string/product_not">
+
+            </TextView>
+            <Switch
+                android:id="@+id/product_not"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="20dp"
+                android:textColor="@color/white">
+
+            </Switch>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_2"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightgray1">
+            <TextView
+                android:id="@+id/saller_update"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="11dp"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:text="@string/seller_upda">
+
+            </TextView>
+            <Switch
+                android:id="@+id/seller_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="20dp"
+                android:textColor="@color/white">
+
+            </Switch>
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/account_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="18dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:layout_below="@id/rl_3"
+            android:textColor="@color/black"
+            android:text="@string/account_set">
+
+        </TextView>
+        <RelativeLayout
+            android:id="@+id/rl_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account_setting"
+            android:layout_marginTop="5dp"
+            android:background="@color/lightgray1">
+            <TextView
+                android:id="@+id/noti_ring"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="40dp"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="11dp"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:text="@string/notificatio_ring">
+
+            </TextView>
+            <Switch
+                android:id="@+id/notifications_ring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="20dp"
+                android:textColor="@color/white">
+
+            </Switch>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/rel_5"
+            android:background="@color/lightgray1"
+            android:layout_below="@id/rl_4">
+
+
+            <TextView
+                android:id="@+id/vb"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingLeft="40dp"
+                android:paddingTop="11dp"
+                android:textSize="17dp"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black"
+                android:text="@string/vibrate">
+
+            </TextView>
+            <Switch
+                android:id="@+id/vibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="20dp"
+                android:checked="true"
+                android:textColor="@color/white">
+
+            </Switch>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

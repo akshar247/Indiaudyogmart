@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.indiaudyogmart">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name=".utils.AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.WantRequirment"></activity>
+        <activity
+            android:name=".activity.AllCityActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.QuotePopup"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.LeadDetails"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.QuoteDetails"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.MyLead"
+            android:theme="@style/AppTheme1" />
+        <activity android:name=".activity.MyTransaction" />
+        <activity
+            android:name=".activity.BuyleadActivity"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.MyReviews"
+            android:theme="@style/AppTheme1" />
+        <activity android:name=".activity.MyOrderSeller" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.Reset_Password" />
+        <activity android:name=".login.Signup_Normal" />
+        <activity android:name=".login.OtpAcitivity" />
+        <activity android:name=".login.Forget_Password" />
+        <activity android:name=".login.Signup_Seller_Company" />
+        <activity android:name=".login.Signup_Seller" />
+        <activity android:name=".login.LoginActivity" />
+        <activity
+            android:name=".dashboard.DashboardActivity"
+            android:theme="@style/AppTheme_Action"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".activity.PayWithIndiaUdyogMart" />
+        <activity android:name=".activity.PaymentDetails" />
+        <activity android:name=".activity.PaymentOptions" />
+        <activity
+            android:name=".activity.HelpAndSupport"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.Language"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.Kyc"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.KycStatus"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.AboutIndiaudhyogmart"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.Settings"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.ShareApp"
+            android:theme="@style/AppTheme1" />
+        <activity android:name=".activity.ManageRequirement" />
+        <activity
+            android:name=".activity.PostRequirments"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.MyFavorites"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.RegisterAsSeller"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.CompanyInfo"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".activity.MessageDetail"
+            android:theme="@style/AppTheme1" />
+
+        <service android:name=".service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_sdjGdLH0sLl03f" />
+    </application>
+
+</manifest>

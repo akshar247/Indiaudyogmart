@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/rl_2">
+        <ImageView
+            android:id="@+id/iv_2"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30dp"
+            android:src="@drawable/whitelogo"/>
+
+        <TextView
+            android:id="@+id/tv_mart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:layout_marginTop="@dimen/_45dp"
+            android:text="@string/indiaudhyogmart"
+            android:layout_toRightOf="@+id/iv_2"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10dp"
+            android:layout_toRightOf="@+id/iv_2"
+            android:layout_below="@id/tv_mart"
+            android:text="@string/des"
+            android:textColor="@color/mywhite"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_1"
+        android:layout_marginTop="@dimen/_40dp"
+        android:id="@+id/rl_3">
+
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="@string/companydetails"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/_30dp"
+            android:textColor="@color/black"
+            />
+        <FrameLayout
+            android:id="@+id/fl_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_below="@+id/tv_details"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@drawable/round_shape_edittext"
+            >
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/entercompanyname"
+                android:paddingLeft="@dimen/_20dp"
+                android:paddingRight="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_below="@+id/fl_1"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@drawable/round_shape_edittext"
+            >
+
+            <EditText
+                android:id="@+id/et_gst"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/entergst"
+                android:paddingLeft="@dimen/_20dp"
+                android:paddingRight="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_below="@+id/fl_2"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@drawable/round_shape_edittext"
+            >
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/entercompanyaddress"
+                android:paddingLeft="@dimen/_20dp"
+                android:paddingRight="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13dp" />
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_below="@+id/fl_3"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@drawable/round_shape_edittext"
+            >
+
+            <EditText
+                android:id="@+id/et_contact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/entercontactersonname"
+                android:paddingLeft="@dimen/_20dp"
+                android:paddingRight="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13dp" />
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_below="@+id/fl_4"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            android:background="@drawable/round_shape_edittext"
+            >
+
+            <EditText
+                android:id="@+id/et_detail_cotact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/entercontact"
+                android:paddingLeft="@dimen/_20dp"
+                android:paddingRight="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13dp" />
+
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/finish"
+        android:textSize="18dp"
+        android:layout_below="@+id/rl_3"
+        android:background="@drawable/next_button_black"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>

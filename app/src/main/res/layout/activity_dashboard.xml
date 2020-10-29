@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/drawer"
+    >
+<!--<include layout="@layout/custome_action_bar"
+    android:id="@+id/include_action_bar"/>-->
+
+   <!-- <RelativeLayout
+        android:id="@+id/rl_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_action_bar"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/_1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/banner"
+        android:layout_marginRight="3dp"
+        android:layout_gravity="center"/>
+            <Button
+                android:layout_width="115dp"
+                android:layout_height="@dimen/_35dp"
+                android:id="@+id/btn_quotenow"
+                android:text="Quote Now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp"
+                android:gravity="center"
+                android:background="@drawable/quote_now"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_25dp"
+                android:layout_marginTop="145dp"
+                />
+        </FrameLayout>
+    </RelativeLayout>
+-->
+
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/custome_action_bar"
+            android:id="@+id/include_action_bar"/>
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/navbottom"
+            android:layout_below="@+id/include_action_bar"
+            android:layout_height="match_parent" />
+        <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mbn_circleColor="@color/Orange"
+            android:id="@+id/navbottom"
+            android:layout_alignParentBottom="true"
+            app:mbn_backgroundBottomColor="@color/white"
+            app:mbn_countBackgroundColor="#ff6f00"
+            app:mbn_countTextColor="@color/black"
+            app:mbn_defaultIconColor="#90a4ae"
+            app:mbn_rippleColor="#2f424242"
+            android:background="@color/white"
+            app:mbn_selectedIconColor="@color/white"
+            app:mbn_shadowColor="#1f212121"/>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        app:itemTextColor="@color/black"
+        app:headerLayout="@layout/nav_header"
+         />
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+<!--    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/meobottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mbn_backgroundBottomColor="#ffffff"
+        app:mbn_countBackgroundColor="#ff6f00"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/_10dp"
+        app:mbn_defaultIconColor="#90a4ae"
+        app:mbn_selectedIconColor="#3c415e"
+        />-->
+
+
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/menu_bottom" />-->
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/header"
+    android:layout_height="176dp"
+    android:gravity="bottom"
+    android:padding="@dimen/_16dp"
+    android:id="@+id/rl_header"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="@dimen/_80dp"
+        android:layout_marginBottom="@dimen/_20dp"
+        android:background="@drawable/circle_black"
+        android:src="@drawable/no_image" />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_toRightOf="@id/iv_image"
+        android:text="@string/profilename"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@id/tv_name"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_toRightOf="@id/iv_image"
+        android:text="@string/profilenum"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <TextView
+        android:id="@+id/tv_buyer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_below="@+id/iv_image"
+        android:textSize="@dimen/_12dp"
+        android:text="@string/buyer" />
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginLeft="190dp"
+        android:layout_below="@+id/iv_image"
+        android:textSize="13dp"
+
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:text="@string/edit" />
+
+</RelativeLayout>

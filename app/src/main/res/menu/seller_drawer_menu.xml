@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_home_1"
+            android:title="@string/Dashboard"
+            />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account"
+            android:visible="false"
+            android:title="@string/myprofile" />
+        <item
+            android:id="@+id/nav_businessinfo"
+            android:icon="@drawable/ic_account"
+            android:title="@string/businessinfo" />
+
+
+
+        <item
+       android:id="@+id/nav_product"
+            android:icon="@drawable/ic_account"
+            android:title="@string/myproduct" />
+
+        <item
+            android:id="@+id/nav_lead"
+            android:icon="@drawable/ic_account"
+            android:title="@string/myleads" />
+        <item
+            android:id="@+id/nav_buylead"
+            android:icon="@drawable/ic_account"
+            android:title="@string/buylead" />
+        <item
+            android:id="@+id/nav_request"
+            android:icon="@drawable/ic_account"
+            android:title="@string/Request" />
+
+        <item
+            android:id="@+id/nav_kyc"
+            android:icon="@drawable/ic_account"
+            android:title="@string/kyc" />
+        <item
+            android:id="@+id/nav_kycinfo"
+            android:icon="@drawable/ic_account"
+            android:title="@string/kycinfo" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+</menu>

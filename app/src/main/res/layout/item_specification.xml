@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dip"
+    android:orientation="horizontal"
+    android:id="@+id/ll_row"
+    android:padding="10dip"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+   <TextView
+       android:id="@+id/tv_title"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_weight="0.1"
+       android:text="@string/app_name"
+       android:textColor="@color/black"
+       android:layout_gravity="center_vertical">
+
+   </TextView>
+    <TextView
+        android:layout_width="40dip"
+        android:layout_height="wrap_content"
+        android:text="@string/doubledot"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/black">
+
+    </TextView>
+    <TextView
+        android:id="@+id/tv_descipton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical">
+
+    </TextView>
+</LinearLayout>

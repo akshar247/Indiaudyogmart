@@ -1,0 +1,412 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:src="@drawable/bg"
+        android:scaleType="centerCrop"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/rl_2">
+        <ImageView
+            android:id="@+id/iv_2"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_30dp"
+            android:src="@drawable/whitelogo"/>
+
+        <TextView
+            android:id="@+id/tv_mart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="@dimen/_45dp"
+            android:text="@string/indiaudhyogmart"
+            android:layout_toRightOf="@+id/iv_2"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_8dp"
+            android:layout_toRightOf="@+id/iv_2"
+            android:layout_below="@id/tv_mart"
+            android:text="@string/des"
+            android:textColor="@color/mywhite"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/rl_2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_30dp"
+        android:background="@drawable/payment_card_shape"
+        android:id="@+id/rl_main">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_title">
+            <TextView
+                android:id="@+id/tv_compney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paymentdetailsname"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginTop="10dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/rl_title">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/image_location"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/location"/>
+            <TextView
+                android:id="@+id/tv_available_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/surat"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/image_location">
+
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_secure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_main"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/safe"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/secure_safe"/>
+        <TextView
+            android:id="@+id/safe_secure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/safe"
+            android:layout_marginLeft="5dp"
+            android:textSize="12dp"
+            android:textColor="#01B147"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/safe"/>
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@drawable/payment_user_details"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_below="@id/rl_secure"
+        android:layout_marginEnd="@dimen/_20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="#001333"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_userdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/userdetails"
+                android:textSize="13dp"
+                android:textColor="@color/white"
+                android:paddingTop="3dp"
+                android:paddingLeft="10dp"
+                >
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="@dimen/_10dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/arrow_button"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/up_arrow">
+
+                </ImageView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/up_circle">
+
+                </ImageView>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ll_2"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/ll_1"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:background="@color/mywhite"
+            android:layout_height="30dp">
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/call"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/c_host_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/profilenum"
+                android:textColorHint="#001333"
+                android:layout_toRightOf="@id/profile"
+                android:textSize="12dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/mywhite"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_3"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/ll_2"
+            android:gravity="center"
+            android:layout_marginTop="1dp"
+            android:background="@color/mywhite"
+            android:layout_height="30dp">
+            <ImageView
+                android:id="@+id/ig_call_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profile"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="10dp">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/c_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/profilename"
+                android:textColorHint="#001333"
+                android:layout_toRightOf="@id/ig_call_blue"
+                android:textSize="12dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/mywhite"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_4"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/ll_3"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:background="@color/mywhite"
+            android:layout_height="30dp">
+            <ImageView
+                android:id="@+id/ig_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/message_icon"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="10dp">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/c_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/emailaddress"
+                android:textColorHint="#001333"
+                android:background="@color/mywhite"
+                android:layout_toRightOf="@id/ig_email"
+                android:textSize="12dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ll_5"
+            android:layout_width="wrap_content"
+            android:background="@color/mywhite"
+            android:layout_below="@id/ll_4"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:id="@+id/ig_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/list_icon"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="12dp">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/c_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/paymentdetails"
+                android:textColorHint="#001333"
+                android:layout_toRightOf="@id/ig_list"
+                android:textSize="12dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:background="@color/mywhite"
+                >
+            </TextView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_6"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/ll_5"
+            android:background="@color/mywhite"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:layout_height="30dp">
+            <ImageView
+                android:id="@+id/ig_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/wallat_icon"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="12dp">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/c_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pricedecimal"
+                android:textColorHint="#001333"
+                android:background="@color/mywhite"
+                android:layout_toRightOf="@id/ig_price"
+                android:textSize="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_below="@id/rl_5"
+        android:layout_marginLeft="30dp">
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:textColor="@color/black">
+
+            <RadioButton
+                android:id="@+id/rb_craditcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:text="@string/credit_card" />
+
+            <RadioButton
+                android:id="@+id/rb_net_banking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:buttonTint="@color/black"
+                android:text="@string/net_banking" />
+
+            <RadioButton
+                android:id="@+id/rb_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:buttonTint="@color/black"
+                android:text="@string/wallet" />
+
+            <RadioButton
+                android:id="@+id/rb_upi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:text="@string/upi" />
+
+            <RadioButton
+                android:id="@+id/rb_paytm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:text="@string/paytm" />
+        </RadioGroup>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

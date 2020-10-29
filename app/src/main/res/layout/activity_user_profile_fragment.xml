@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_15dp"
+            android:orientation="vertical"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="130dip"
+                android:layout_height="130dip"
+                android:layout_marginTop="@dimen/_20dp"
+                android:src="@drawable/no_image"
+                android:layout_gravity="center_horizontal">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <Button
+                android:id="@+id/btn_changeimage"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_marginTop="@dimen/_15dp"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:text="@string/profile_label1"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shop_button">
+
+
+            </Button>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:padding="15dip"
+                android:background="@color/mywhite">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/name">
+
+                </TextView>
+                <EditText
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="@dimen/_10dp"
+                    android:background="@drawable/round_shape_edittext"
+                    android:textSize="@dimen/_13sp"
+                    android:textColor="@color/black"
+                    >
+
+                </EditText>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:padding="15dip"
+                android:background="@color/mywhite">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/mobile1">
+
+                </TextView>
+                <EditText
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textSize="@dimen/_13sp"
+                    android:padding="@dimen/_10dp"
+                    android:background="@drawable/round_shape_edittext"
+
+                    android:textColor="@color/black"
+                    >
+
+                </EditText>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:padding="15dip"
+                android:background="@color/mywhite">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/emailadd">
+
+                </TextView>
+                <EditText
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:padding="@dimen/_10dp"
+                    android:textSize="@dimen/_13sp"
+                    android:background="@drawable/round_shape_edittext"
+                    android:textColor="@color/black"
+                    >
+
+                </EditText>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:padding="15dip"
+                android:background="@color/mywhite">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/address">
+
+                </TextView>
+                <EditText
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:hint="@string/address"
+                    android:padding="@dimen/_10dp"
+                    android:background="@drawable/round_shape_edittext"
+                    android:textSize="@dimen/_13sp"
+                    android:textColor="@color/black"
+                    >
+
+                </EditText>
+            </FrameLayout>
+            <Button
+                android:id="@+id/btn_edit_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="50dip"
+                android:layout_marginRight="50dip"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:text="@string/profile_label2"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shop_button">
+
+
+            </Button>
+        </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

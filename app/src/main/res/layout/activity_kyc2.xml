@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@drawable/action_bar_bg"
+        >
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_30dp"
+
+                android:src="@drawable/ic_white_back_arrow" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/transactions"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:text="KYC"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextColor="@color/black"
+        android:layout_below="@id/rl_actionbar"
+        app:tabTextAppearance="@style/MyCustomTabText"
+        android:background="@color/mywhite">
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabLayout"
+        android:outlineSpotShadowColor="@color/DarkBlue"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        tools:layout_editor_absoluteX="5dp" />
+</RelativeLayout>

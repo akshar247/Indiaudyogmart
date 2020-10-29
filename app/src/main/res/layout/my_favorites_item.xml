@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="@dimen/_10dp"
+    android:id="@+id/rl_favorites"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="175dp"
+        android:layout_height="212dp"
+        android:background="@drawable/favorites_card_shape"
+        app:cardCornerRadius="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/product_img"
+                android:layout_width="match_parent"
+                android:layout_height="140sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/headphone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="@string/favoritesitemdetails"
+                android:textColor="@color/white"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:textSize="11dp"
+                android:layout_below="@id/product_img"
+                android:id="@+id/productname"
+                android:background="@color/black"/>
+            <Button
+                android:id="@+id/btn_get_quotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productname"
+                android:layout_centerInParent="true"
+                android:background="@drawable/favorites_button"
+                android:text="@string/getquotes"
+                android:textColor="@color/white"
+                android:textSize="18dp"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

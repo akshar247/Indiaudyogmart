@@ -1,0 +1,613 @@
+<resources>
+    <string name="app_name">IndiaUdyogMart</string>
+
+    <string name="coming_son">Coming Soon</string>
+    <string name="noNetworkFound">You\'re not connected to the Internet. Please connect and retry. </string>
+    <string name="msg_NO_INTERNET_RESPOND">Please connect your internet connection</string>
+    <string name="msg_please_wait">Please wait …</string>
+    <string name="msg_server_error">Something went wrong please try again</string>
+    <string name="msg_press_back_twice">Double tab to back</string>
+
+    <string name="dialog_yes">YES</string>
+    <string name="dialog_no">NO</string>
+    <string name="dialog_ok">OK</string>
+
+    <string name="str_or">OR</string>
+    <string name="str_submit">Submit</string>
+
+
+    <string name="hi">Hi</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+
+    <!--Spinner Select Category-->
+    <string-array name="categoty">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+        <item>item5</item>
+        <item>item6</item>
+    </string-array>
+
+    <string-array name="chquetype">
+        <item>Cancel Cheque</item>
+
+    </string-array>
+    <!--Feedback-->
+    <string name="please_leav">Please leave your commnets and suggestions to help us improve.</string>
+
+
+    <!--Help & support-->
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nWhere does it come from?\u000D\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nWhere does it come from?\u000D\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</string>
+
+
+    <!--Main-->
+    <string name="indiaudhyogmart">IndiaUdyogMart</string>
+    <string name="des">The Only One Stop E-Commerce Market</string>
+
+
+    <!--Login-->
+    <string name="loginaccount">LOGIN ACCOUNT</string>
+    <string name="username">Enter Email / Mobile</string>
+    <string name="password">Enter Password</string>
+    <string name="remember">Remember Me!</string>
+    <string name="signin">SIGN IN</string>
+    <string name="forget">Forgot Password?</string>
+    <string name="donthaveaccount">Don\'t have an account?</string>
+    <string name="createaacount">CREATE ACCOUNT</string>
+
+
+    <!--signup normal-->
+    <string name="fullname">Enter Full Name</string>
+    <string name="email">Enter Email Address</string>
+    <string name="mobile">Enter Mobile Number</string>
+    <string name="location">Enter Location</string>
+    <string name="signup">SIGN UP</string>
+    <string name="seller">SELLER</string>
+    <string name="alredyaccount">Already have account?</string>
+    <string name="login">LOG IN</string>
+
+    <!--SIGNUP SELLER-->
+    <string name="buyer">BUYER</string>
+
+
+    <!--Comapny-->
+    <string name="companydetails">COMPANY DETAILS</string>
+    <string name="companyname">Company Name</string>
+    <string name="comapnylocation">Company Loaction</string>
+    <string name="comapnywebsite">Company Website</string>
+    <string name="back">BACK</string>
+
+
+    <!--forget-->
+    <string name="resetpassword">RESET PASSWORD</string>
+
+    <!--otp-->
+    <string name="otp">ENTER OTP</string>
+    <string name="enterotp">Enter OTP Here</string>
+    <string name="submitotp">SUBMIT OTP</string>
+    <string name="notrecive">Didn\'t receive?</string>
+    <string name="resend">RESEND OTP</string>
+
+    <!--reset-->
+    <string name="reenterpassword">Re Enter Password</string>
+    <string name="submit">SUBMIT</string>
+
+    <!--dashboard-->
+    <string name="indiaudhyogmartdashboard">IndiaUdyogMart</string>
+    <string name="shop">Shop</string>
+    <string name="nearto">Near to</string>
+    <string name="surat">Surat</string>
+    <string name="searchanything">Search Anything Here...</string>
+
+
+    <!--drawer-->
+    <string name="home">होम</string>
+    <string name="Importantsupplier">Important Suppliers</string>
+    <string name="browseindustries">View All Categories</string>
+    <string name="postrequriment">Post Requirements</string>
+    <string name="message">Messages</string>
+    <string name="paywithindiauthyogmart">Pay With IndiaUdyogMart</string>
+    <string name="managerequrirement">Manage Requirements</string>
+    <string name="favorites">My Favourites</string>
+    <string name="sellertools">Seller Tools</string>
+    <string name="feedback">Feedback</string>
+    <string name="help">Help and Support</string>
+    <string name="language">भाषा चुनें</string>
+    <string name="share">Share App</string>
+    <string name="about">About IndiaUdyogMart</string>
+    <string name="settings">Settings</string>
+    <string name="selectsupplier">Select Supplier</string>
+    <string name="logout">Logout</string>
+
+
+    <!--header-->
+    <string name="profilename">Akshar Dholakiya</string>
+    <string name="profilenum">+91 9054298628</string>
+    <string name="edit">Edit</string>
+
+
+    <!--important supplier-->
+    <string name="sanitizer">Hand Sanitizer</string>
+    <string name="mask">Face Mask</string>
+    <string name="personalprotectivce">Personal Protective Equipment</string>
+    <string name="faceshield">Face Shield</string>
+    <string name="safety">Safety goggles</string>
+    <string name="disposable">Disposable Gloves</string>
+    <string name="medicalcaps">Madical Caps</string>
+    <string name="title">Title</string>
+    <string name="hazmatsuit">Hazmat Suit</string>
+
+    <string name="viewall">View All</string>
+
+    <!--product details item-->
+    <string name="productname">Product Name</string>
+    <string name="cosmetic_pv">Cosmetic Pvt. Ltd.</string>
+    <string name="surat_india">Surat, India</string>
+    <string name="available_i">Available in Surat</string>
+    <string name="ml">250 / 100 ML</string>
+    <string name="callnow">Call now</string>
+    <string name="getletestprice">Get latest Price</string>
+
+
+    <!--post requirement item-->
+    <string name="searchandfindbase">Search and Find best Suitable products for you...</string>
+    <string name="enterproductname">Enter Product Name</string>
+    <string name="next">NEXT</string>
+
+
+    <!--message item-->
+    <string name="companynamemessage">Shantinath Chemicals Pvt. Ltd.</string>
+    <string name="owner">Shivam Jogani</string>
+    <string name="manufacture">Manufacturing Style Product</string>
+    <string name="messagedetails">Hi, Taroon Rupapreliya, IndiaUdhyogMart Give you best service...</string>
+    <string name="date">1 Aug 20</string>
+    <string name="call">2</string>
+
+
+    <!--message details-->
+    <string name="messagetitle">I want to buy new chemicals Dyes.</string>
+    <string name="messagedescription">Kindly send me price and other details.</string>
+    <string name="quntity">Quantity :</string>
+    <string name="quntityliter">55 Liters</string>
+    <string name="requirement">Requirement Type :</string>
+    <string name="requrimenttype">Business Use</string>
+
+
+    <!--pay with indiaudhyogmart-->
+    <string name="paynow">Pay Now</string>
+    <string name="finalize_de">Finalize\nDeal</string>
+    <string name="payment_opt">Payment\nOptions</string>
+    <string name="pay_securel">Pay\nSecurely</string>
+
+
+    <!--payment option-->
+    <string name="sellernumber">Seller Mobile Number</string>
+    <string name="amount">Amount</string>
+
+
+    <!--payment details-->
+    <string name="paymentdetailsname">Shantinath chemicales</string>
+    <string name="safe">100% Safe &amp; Secure Payments</string>
+    <string name="userdetails">User Details</string>
+    <string name="emailaddress">taroonrupareliya007@gmail.com</string>
+    <string name="paymentdetails">abcd</string>
+    <string name="pricedecimal">Rs. 100.00</string>
+    <string name="credit_card">Credit Card or Debit Card</string>
+    <string name="net_banking">Net Banking</string>
+    <string name="wallet">Wallet</string>
+    <string name="upi">UPI</string>
+    <string name="paytm">Paytm</string>
+
+
+    <!--manage requirement-->
+    <string name="requirementtitle">Direct Orange Dyes</string>
+    <string name="requirementdetails">12 suppliers Connected</string>
+    <string name="closed">Closed</string>
+    <string name="running">Running</string>
+
+
+    <!--favorites-->
+    <string name="favoritesitemdetails">Hand Sanitizer with liquid Form</string>
+    <string name="getquotes">Get Quotes</string>
+
+
+    <!--register as seller-->
+    <string name="primarydetails">Primary Details</string>
+    <string name="verified">Verified</string>
+    <string name="secondarydetails">Secondary Details</string>
+    <string name="verifynow">Verify Now</string>
+
+
+    <!--company info-->
+    <string name="entercompanyname">Enter Company Name</string>
+    <string name="entergst">Enter GST Number</string>
+    <string name="entercompanyaddress">Enter Company Address</string>
+    <string name="entercontactersonname">Enter Contact Person Name</string>
+    <string name="entercontact">Enter Contact Details</string>
+    <string name="finish">FINISH</string>
+
+
+    <!--language-->
+    <string name="hindi">Hindi</string>
+    <string name="gujarati">Gujarati</string>
+    <string name="english">English</string>
+
+
+    <!--Settings-->
+    <string name="notificatio">NOTIFICATIONS</string>
+    <string name="new_updates">New Updates</string>
+    <string name="product_not">Product Notification</string>
+    <string name="seller_upda">Seller Update</string>
+    <string name="account_set">ACCOUNT SETTING</string>
+    <string name="notificatio_ring">Notification Ringtone</string>
+    <string name="vibrate">Vibrate</string>
+
+    <!--buy leads-->
+    <string name="buyleads">Current Package</string>
+    <string name="dayremain">24 Days Remain</string>
+    <string name="dayleft">02 Bids Left</string>
+    <string name="buyleadsdetails">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s. when an unknown printer took a galley of type and scrambled it. To make a type specimen book. It has survived not only five centuries. But also the leap into electronic typesetting, remaining essentially unchanged.</string>
+
+
+    <!--buy leads item-->
+    <string name="stater">Starter</string>
+    <string name="leads">Leads</string>
+    <string name="duration">Duration </string>
+    <string name="inr">INR</string>
+
+    <!--package-->
+    <string name="basicpackage">Basic Package</string>
+    <string name="packagedetails">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s. when an unknown printer took a galley of type and scrambled it. To make a type specimen book. It has survived not only five centuries. But also the leap into electronic typesetting, remaining essentially unchanged.</string>
+    <string name="basic">Basic</string>
+    <string name="active">Active</string>
+
+    <!-- send Quote -->
+    <string name="send_quote">Send Quote</string>
+    <string name="quote_quant">Quote Quantity*</string>
+    <string name="please_ente">Please enter quantity here...</string>
+    <string name="quote_price">Quote Price Per\nQuantity</string>
+    <string name="please_ente_price">Please enter price here...</string>
+    <string name="sample_unit">Sample Unit*</string>
+    <string name="enter_numbe">Enter number of samples</string>
+    <string name="sample_secu">Sample Security\nCharges*</string>
+    <string name="sample_char">Sample Charges\nPer Unit*</string>
+    <string name="enter_sampl">Enter sample charge per unit</string>
+    <string name="shipping_ti">Shipping Time\n(In Days)*</string>
+    <string name="enter_shipping_ti">Shipping time (in days)</string>
+    <string name="note_for_cu">Note For\nCustomer*</string>
+    <string name="please_ente_note">Please enter product name here...</string>
+    <string-array name="sample">
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+    <string-array name="charge">
+        <item>yes_aplicable</item>
+        <item>no_aplicable</item>
+
+    </string-array>
+    <!--myaccount-->
+    <string name="accountnotification">025</string>
+    <string name="myproduct">My Products</string>
+    <string name="myorder">My Orders</string>
+    <string name="myissues">My Issues</string>
+    <string name="myrevive">My Reviews</string>
+    <string name="mytrasaction">My Transactions</string>
+    <string name="myleads">My Leads</string>
+
+
+    <!--my product-->
+    <string name="productdes">Product Details</string>
+    <string name="quntityproduct">85</string>
+    <string name="productprice">500/-</string>
+
+
+    <!--add product-->
+    <string name="addproduct">Add Product</string>
+    <string name="selectcategory">Select Category</string>
+    <string name="selectsubcategory">Select Subcategory</string>
+    <string name="sku">SKU</string>
+    <string name="productimage">Product Image</string>
+    <string name="barndname">Brand Name</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
+    <string name="selectcolor">Select Color</string>
+    <string name="selectvarient">Select Varient</string>
+    <string name="addvarient">Add Varient</string>
+    <string name="createproduct">Create Product</string>
+    <string name="enterskunum">Enter SKU For The Product</string>
+    <string name="enterproductprice">Enter Product Price Here...</string>
+    <string name="enterproductbrand">Enter Product Brand Here...</string>
+    <string name="enterdescription">Enter Product Description Here...</string>
+    <string name="browse">BROWSE</string>
+    <string name="enterproductname1">Please Enter Product Name here...</string>
+
+
+    <!--my orders-->
+    <string name="orderid">Order Id : </string>
+    <string name="buyer1">Buyer Name :</string>
+    <string name="buyername">Akshar Dholakiya</string>
+    <string name="delivered">Delivered</string>
+    <string name="id">OD5646ADAD456</string>
+
+    <!--new orders-->
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+
+
+    <!--my issues-->
+    <string name="issuestitle">Subject Line here for you</string>
+    <string name="issuesdes">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an re</string>
+
+
+    <!--Required Details-->
+    <string name="required_de">Required Details</string>
+    <string name="quantity">Quantity :</string>
+    <string name="requirement_for">Requirement For :</string>
+    <string name="repost">Repost</string>
+
+
+    <!--list supplier-->
+    <string name="website">Website :</string>
+    <string name="contact_per">Contact Person</string>
+    <string name="email1">Email :</string>
+    <string name="address1">Address :</string>
+    <string name="send_message">send message</string>
+
+
+    <!--my cart-->
+    <string name="deliver_to">Deliver to</string>
+    <string name="change">CHANGE</string>
+    <string name="size">Size :</string>
+    <string name="seller_name">Seller Name :</string>
+    <string name="delivery_by">Delivery by</string>
+    <string name="save_for_la">Save for Later</string>
+    <string name="quantity_s">Quantity</string>
+    <string name="price_1_ite">Price</string>
+    <string name="discount">Discount</string>
+    <string name="delivery_ch">Delivery Charges</string>
+    <string name="total_amoun">Total Amount</string>
+    <string name="safe_and_se">Safe and Secure Payments. Easy Returns.\n100% Authentic Products.</string>
+    <string name="place_order">PLACE ORDER</string>
+    <string name="view_price_"><u>View Price Details</u></string>
+    <string name="price_detai">Price Details</string>
+    <string name="shipping">Shipping</string>
+    <string name="qty">Qty</string>
+    <string name="saveprofile">Save</string>
+
+
+    <!--set address-->
+    <string name="change_or_a">Change or Add Address</string>
+    <string name="office">OFFICE</string>
+
+
+    <!--lead Details-->
+    <string name="datelead">Date: </string>
+    <string name="deslead">Description about product by person.</string>
+    <string name="btn_you">You</string>
+    <string name="qut_qty">Quoted Quantity</string>
+    <string name="bid_price">Bid Price</string>
+    <string name="samples">Samples</string>
+    <string name="shippinglead">Shipping</string>
+
+
+    <!--Add Address-->
+    <string name="add_address">ADD ADDRESS</string>
+    <string name="name">Name</string>
+    <string name="mobile1">Mobile</string>
+    <string name="address">Address</string>
+    <string name="pincode">Pincode</string>
+    <string name="place">Place</string>
+    <string name="enter_name_">Enter name here...</string>
+    <string name="enter_mobil">Enter mobile number here...</string>
+    <string name="enter_addre">Enter address here..</string>
+    <string name="check">Check</string>
+
+
+    <!--Craete Issue-->
+
+    <string name="create_issu">Create Issue</string>
+    <string name="subject">Subject</string>
+    <string name="topic">Topic</string>
+    <string name="select_topi">Select Topic</string>
+    <string name="enter_messa">Enter Message here...</string>
+    <string name="enter_sub">Enter Subject here...</string>
+
+
+    <!--quote popup-->
+    <string name="product">Product</string>
+    <string name="category">Category</string>
+    <string name="unit">Unit</string>
+    <string name="simple">Sample</string>
+
+    <!--order list-->
+    <string name="pro_nm">Product Name</string>
+    <string name="price1">Price : </string>
+    <string name="size1">Size : </string>
+    <string name="qty1">Qty : </string>
+    <string name="deli_on">Delivered on </string>
+    <string name="return_on">Return Policy Ended on </string>
+    <string name="btn_track">Track Order</string>
+
+
+    <string name="view_more">View More</string>
+
+    <string name="leaddetails">Lead Details</string>
+
+    <string name="listofsuppliers">List Of Suppliers</string>
+
+    <string name="delete">Delete</string>
+    <string name="view">View</string>
+    <string name="paid">Paid</string>
+    <string name="unpaid">UnPaid</string>
+    <string name="openbid">Open Bid</string>
+
+
+    <string name="writesomethimghere">Write Something here...</string>
+    <string name="send">Send</string>
+
+    <string name="department">Marketing Department</string>
+    <string name="websitegoogle">https://www.google.com</string>
+    <string name="addressadd">B 409 Ambosia Business Hub, VIP Road,Vesu,Surat, Gujarat 394518</string>
+
+
+    <string name="enquiry_to_">Enquiry to Suppliers</string>
+    <string name="full_name">Full Name</string>
+    <string name="number">Number</string>
+    <string name="write_somet">write something here...</string>
+    <string name="color">Color</string>
+    <string name="enter_pinco">Enter pincode</string>
+    <string name="product_des">Product Description</string>
+    <string name="ratings">Ratings</string>
+    <string name="available_o">Available Offers</string>
+    <string name="gb_ram_128_">4 GB RAM | 128 GB ROM | Expandable Upto 256 GB\u000D\n16.51 cm (6.5 inch) HD+ Display\u000D\n48MP + 8MP + 2MP + 2MP | 16MP Front Camera\u000D\n5000 mAh Lithium-ion Battery\u000D\nMediaTek Helio G80 (12 nm) Processor\u000D\nBrand Warranty of 1 Year Available for Mobile and 6 Months for Accessories</string>
+    <string name="model_name_">Model Name - SLK20R\u000D\nMaterial - Optical\u000D\nCPU - 280MHz DSP\u000D\nFlash - 32 MB\u000D\nSoC - RTOS[image out only]\u000D\nImage Quality - 2 million pixels CMOS\u000D\nEncrypted Fingerprint Data - YES\u000D\nSunlight Operation - Yes, Dark field and Automatic Gain / Exposure\u000D\nWater Splash - YES\u000D\nDry, Wet, or Rough Fingerprints - Work well\u000D\nPower Consumption - 5V:200mA Scanning;5V:60mA idle (waiting for finger)\u000D</string>
+    <string name="deliverto">Deliver to</string>
+    <string name="quantity1">Quantity :</string>
+    <string name="pro_spe">Product Specification</string>
+    <string name="model_name">Model Name/Number</string>
+    <string name="brand">Brand</string>
+    <string name="usage_app">Usage/Application</string>
+
+    <string name="err_email_mobil">Please enter your email or mobile number</string>
+    <string name="err_email">Please enter your email address</string>
+    <string name="err_valid_email">Please enter valid your email address</string>
+    <string name="err_pwd">Please enter your password</string>
+    <string name="err_pwd1"> Please enter password between 6 to 20 characters !</string>
+    <string name="err_conf_pwd">Please enter your confirm password</string>
+    <string name="err_conf_pwd1">Please enter confirm password between 6 to 20 characters !</string>
+    <string name="err_invalid">Invalid email or password</string>
+    <string name="err_mismatch">Password and confirm password doesn\'t match</string>
+    <string name="err_camera">Please select your image</string>
+    <string name="err_name">Please enter your name</string>
+    <string name="err_fname">Please enter your first name</string>
+    <string name="err_lname">Please enter your last name</string>
+    <string name="err_mobil">Please enter your phone number</string>
+    <string name="err_old_pwd">Please enter your old password</string>
+    <string name="err_new_pwd">Please enter your new password</string>
+    <string name="err_invalid_otp">Please enter valid otp code</string>
+    <string name="err_cancel">Failed Transaction, please try again.</string>
+    <string name="err_payment">Your payment failed, please try again after sometime.</string>
+    <string name="err_cate">Please select category</string>
+    <string name="err_image">Please select image or video</string>
+    <string name="err_titl">Please select title</string>
+    <string name="err_titl1">Title require minimum 3 characters !</string>
+    <string name="err_price">Please select price</string>
+    <string name="err_desc">Please select description</string>
+    <string name="err_loc">Please select location</string>
+    <string name="err_youtub">Please enter valid youtube url</string>
+    <string name="err_enter">Please enter </string>
+    <string name="err_select">Please select </string>
+    <string name="err_ad_owner">You are owner of this ad.</string>
+    <string name="err_no_usr">You are not able to chat with this user.</string>
+    <string name="err_web">Please enter valid website.</string>
+    <string name="err_fb">Please enter valid facebook URL.</string>
+    <string name="err_google">Please enter valid google URL.</string>
+    <string name="err_insta">Please enter valid instagram URL.</string>
+    <string name="err_finger">Your Touch ID not registered with our system.</string>
+    <string name="err_del_ad">Ad Deleted.</string>
+    <string name="err_expir_ad">Ad Expired.</string>
+    <string name="err_govern">Please select first governorate.</string>
+    <string name="err_city">Please select first city.</string>
+    <string name="err_block">Please select block.</string>
+    <string name="err_startdate">Please select start date</string>
+    <string name="err_endate">Please select end date</string>
+    <string name="err_date_compare">Please select  end date after start date</string>
+    <string name="home_title1">Products you Interest</string>
+    <string name="home_title2">Categories of your Interest</string>
+    <string name="register_error8">Please enter company name</string>
+    <string name="register_error9">Please enter company location.</string>
+
+    <string name="myaccount">My Account</string>
+    <string name="piese">Piece</string>
+
+    <string name="err_message">Please Enter Message...</string>
+    <string name="sendQuotes">Send Quote</string>
+    <string name="buynow">Buy</string>
+    <string name="error_add_quote1">Please enter quote quantity.</string>
+    <string name="error_add_quote2">Please enter quote price.</string>
+    <string name="error_add_quote3">Please enter email.</string>
+    <string name="error_add_quote4">Please enter mobile number.</string>
+    <string name="error_add_quote5">Please enter quote description.</string>
+    <string name="error_add_quote6">Please enter quote sample unit.</string>
+    <string name="error_add_quote7">Please enter quote sample charge per unit.</string>
+    <string name="error_add_quote8">Please enter quote shipping time.</string>
+    <string name="error_add_quote9">Please enter quote.</string>
+    <string name="days">Days</string>
+    <string name="approved">Approved</string>
+    <string name="rejected">Rejected</string>
+    <string name="error_message">Please enter message</string>
+    <string name="myuotes">My Quotes</string>
+    <string name="error_quote10">You do not send quote this time</string>
+    <string name="quotedelais">Quote Details</string>
+    <string name="nodata">No Data</string>
+    <string name="profile_label1">Change Image</string>
+    <string name="profile_label2">Edit Profile</string>
+    <string name="profile_label3">Edit Business Profile</string>
+    <string name="emailadd">Email</string>
+    <string name="doubledot">:</string>
+    <string name="Dashboard">Dashboard</string>
+    <string name="myprofile">My Profile</string>
+    <string name="buylead">Buy Leads</string>
+    <string name="kyc">KYC</string>
+    <string name="kycinfo">KYC Info</string>
+    <string name="city">City</string>
+    <string name="searchcity">Please enter city name</string>
+
+
+    <string name="request">Request_21153</string>
+    <string name="approve">Approved</string>
+    <string name="fieldname">ABC</string>
+    <string name="olddate">26/04/2020</string>
+    <string name="newdate">24/07/2020</string>
+    <string name="date1">24/05/2020</string>
+    <string name="test">Test</string>
+    <string name="error_pan1">Please enter name as per pancard</string>
+    <string name="error_pan2">Please enter pan card number</string>
+    <string name="error_bank1">Please enter bank name</string>
+    <string name="error_bank2">Please enter account holder name</string>
+    <string name="error_bank3">Please enter account number</string>
+    <string name="error_adharname">Please enter name on adhar card.</string>
+    <string name="error_adhar2">"Please enter adhar card number "</string>
+    <string name="req_id">Req_</string>
+    <string name="businessdetails">Business Details</string>
+    <string name="enterbusinessname">Enter Business Name</string>
+    <string name="enterbusinessaddress">Enter Business Address</string>
+    <string name="businessinfo">Business Info</string>
+    <string name="err_businessname">Please enter business name</string>
+    <string name="err_gst">Please enter gst number</string>
+    <string name="pancrd">Pancard Number</string>
+    <string name="err_businessaddress">Please enter business address</string>
+    <string name="err_pannumber">Please enter pancard number</string>
+    <string name="forgethaveaccount">Did you get</string>
+    <string name="Request">Request</string>
+
+    <string-array name="reqirement_time">
+        <item>1 month</item>
+        <item>3 week</item>
+        <item>Immediate</item>
+    </string-array>
+    <string-array name="reqirement_location">
+        <item>Local</item>
+        <item>In India</item>
+        <item>In India</item>
+        <item>International </item>
+    </string-array>
+    <string name="i_agree">I agree to Terms and Conditions</string>
+    <string name="msg">ohk</string>
+    <string name="error_qty">Please enter quantity</string>
+    <string name="error_unit">Please enter unit</string>
+    <string name="error_approx">Please enter approx value</string>
+    <string name="error_your_loc">Please enter your loaction</string>
+    <string name="error_detail">Please enter Buying detail</string>
+    <string name="error_country">Please enter your country</string>
+    <string name="brandtype">Brand Type</string>
+    <string name="sellertype">Seller Type</string>
+    <string name="discount_val">% OFF</string>
+    <string name="rs_val">RS.</string>
+    <string name="nocityfound">No City Found</string>
+    <string name="suggestforyou">Related Product</string>
+</resources>

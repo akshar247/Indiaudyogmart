@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:layout_width = "match_parent"
+    android:layout_height = "wrap_content"
+    android:background="@drawable/action_bar_bg"
+    android:padding = "@dimen/_10dp">
+    <RelativeLayout
+        android:id="@+id/ll_actionbar"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_toLeftOf="@+id/action1"
+
+       >
+        <ImageView
+            android:id="@+id/ib_drawer"
+            android:layout_width="36dip"
+            android:layout_height="36dip"
+            android:padding="5dip"
+            android:src="@drawable/ic_baseline_dehaze_24"/>
+        <ImageView
+            android:id="@+id/iv_actionbar_logo"
+            android:layout_width = "30dip"
+            android:layout_toRightOf="@id/ib_drawer"
+            android:layout_height = "30dip"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:src = "@drawable/logo" />
+       <TextView
+            android:id = "@+id/tv_user"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:layout_marginLeft = "5dp"
+           android:layout_marginTop="@dimen/_5dp"
+            android:layout_toRightOf="@id/iv_actionbar_logo"
+            android:text = ""
+            android:textSize = "17sp"
+            android:textColor = "@color/white"
+            android:textStyle = "bold" />
+    </RelativeLayout>
+      <RelativeLayout
+          android:id="@+id/action1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_alignParentRight="true"
+            >
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="@dimen/_25dp"
+            android:id="@+id/btn_shop"
+            android:text="@string/shop"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_2dp"
+            android:textColor="@color/white"
+            android:background="@drawable/shop_button"
+            android:textSize="@dimen/_10dp"
+            android:layout_gravity="left"
+            />
+        <ImageView
+            android:id="@+id/iv_cart"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:src="@drawable/ic_cart"
+            android:visibility="gone"
+            android:padding="5dip"
+            android:layout_toRightOf="@id/btn_shop"
+            android:layout_marginLeft="@dimen/_10dp"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profileimage"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_toRightOf="@id/iv_cart"
+            android:src="@drawable/circle_img"
+            android:background="@drawable/circle_image"
+            android:layout_marginLeft="@dimen/_10dp"
+            />
+    </RelativeLayout>
+<FrameLayout
+    android:id="@+id/fl_location"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="@dimen/_30dp"
+    android:visibility="visible"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/ll_actionbar2"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+
+
+        android:layout_marginLeft="@dimen/_5dp"
+        >
+        <ImageView
+            android:layout_width = "120dip"
+            android:layout_marginTop="12dp"
+            android:layout_height = "38dp"
+            android:id="@+id/iv_main"
+            android:background="@drawable/button_location"
+            />
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:src="@drawable/location"
+                android:layout_marginTop="@dimen/_15dp"
+                />
+            <TextView
+                android:id="@+id/tv_nearto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/location"
+                android:layout_marginTop="@dimen/_15dp"
+                android:textColor="@color/Gray"
+                android:visibility="gone"
+                android:textSize="@dimen/_10dp"
+                android:text="@string/nearto"/>
+            <TextView
+                android:id="@+id/tv_cityname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:layout_toRightOf="@id/location"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:text="surat"/>
+    </RelativeLayout>
+</FrameLayout>
+    <FrameLayout
+        android:id="@+id/fl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/fl_location"
+        android:layout_marginTop="42dp"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/_8dp"
+        android:background="@drawable/button_location"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5dp"
+        android:layout_gravity="center"
+
+        >
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:hint="@string/searchanything"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_background"
+            android:paddingLeft="@dimen/_15dp"
+            android:imeOptions="actionSearch"
+            android:textSize="10dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:paddingRight="@dimen/_20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray" />
+
+        <ImageView
+            android:id="@+id/iv_mic"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_mic_24"
+            android:layout_toLeftOf="@+id/et_search"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10dp">
+        </ImageView>
+</RelativeLayout>
+</FrameLayout>
+
+</RelativeLayout>

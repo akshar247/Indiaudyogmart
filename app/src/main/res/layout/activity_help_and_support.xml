@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/black">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_30dp"
+                android:background="@color/black"
+                android:src="@drawable/ic_white_back_arrow" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/transactions"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:text="Help And Support"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_below="@+id/rl_actionbar"
+            android:layout_height="match_parent">
+    <!--    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lineSpacingExtra="5dp"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            android:text="@string/lorem_ipsum"/>-->
+    <com.codesgood.views.JustifiedTextView
+        android:id="@+id/tv_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:lineSpacingExtra="@dimen/_2dp"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+</ScrollView>
+    </RelativeLayout>

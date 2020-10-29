@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_full">
+
+    </ImageView>
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200dp"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ss_1"/>
+
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="@dimen/_110dp"
+        android:layout_height="@dimen/_110dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_50dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:id="@+id/tv_mart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_25dp"
+        android:text="India Udyog Mart"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_below="@id/iv_2"
+        android:layout_marginTop="@dimen/_2dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        ></TextView>
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15dp"
+        android:text="The Only On Stop E-Commerce Market"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_mart"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_2dp"
+        android:textColor="@color/Gray"
+        ></TextView>
+
+
+    <ImageView
+        android:id="@+id/iv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:visibility="gone"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/group"/>
+</RelativeLayout>

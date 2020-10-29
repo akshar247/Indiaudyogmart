@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mywhite"
+    tools:context=".login.OtpAcitivity">
+
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login" />
+
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="@dimen/_110dp"
+        android:layout_height="@dimen/_110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30dp"
+        android:src="@drawable/whitelogo" />
+
+    <TextView
+        android:id="@+id/tv_mart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_2dp"
+        android:text="@string/indiaudhyogmart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_25dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_2dp"
+        android:text="@string/des"
+        android:textColor="@color/mywhite"
+        android:textSize="@dimen/_15dp"></TextView>
+
+    <LinearLayout
+        android:id="@+id/ll_contain"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/tv_des"
+        android:layout_marginLeft="50dip"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginRight="50dip"
+        android:background="@drawable/round_shape"
+        android:orientation="vertical"
+        android:padding="@dimen/_20dp">
+
+        <TextView
+            android:id="@+id/tv_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/otp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold"></TextView>
+
+        <FrameLayout
+            android:id="@+id/fl_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_toLeftOf="@+id/ll_contain"
+            android:background="@drawable/round_shape_edittext">
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="@dimen/_15dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_marginLeft="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_3dp"
+                android:src="@drawable/ic_otp"></ImageView>
+
+            <EditText
+                android:id="@+id/et_otp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/enterotp"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/_50dp"
+                android:paddingRight="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/text_view_countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/_15dp"
+                android:paddingLeft="@dimen/_10dp"
+                android:paddingRight="@dimen/_15dp"
+                android:text="00:00"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="13dp" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_verifyotp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_background"
+            android:text="@string/submitotp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_resendotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_contain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_otprecive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5dp"
+            android:text="@string/notrecive"
+            android:textColor="@color/Gray"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/tv_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10dp"
+            android:text="@string/resend"
+            android:textColor="@color/Orange"
+            android:textSize="18dp"
+            android:textStyle="bold"></TextView>
+    </LinearLayout>
+</RelativeLayout>

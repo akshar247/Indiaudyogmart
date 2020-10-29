@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:id="@+id/rl_left"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5dp"
+        android:background="@drawable/feedback_border"
+        android:layout_margin="@dimen/_5dp">
+   <de.hdodenhof.circleimageview.CircleImageView
+    android:layout_width="@dimen/_30dp"
+    android:id="@+id/iv_profile"
+    android:layout_centerVertical="true"
+    android:src="@drawable/no_image"
+    android:layout_height="@dimen/_30dp">
+
+</de.hdodenhof.circleimageview.CircleImageView>
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/iv_profile"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_7dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sp"
+            android:layout_marginLeft="@dimen/_10dp" />
+
+        <FrameLayout
+            android:id="@+id/fl_button"
+            android:layout_centerInParent="true"
+            android:background="@drawable/next_button"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_width="140dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/rl_button">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/call"
+                    android:layout_toLeftOf="@+id/btn_pay"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_50dp"
+                    app:tint="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/callnow"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_marginRight="@dimen/_40dp"
+                    android:background="@color/transparent"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+        </FrameLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_msg"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/_5dp"
+            android:paddingBottom="@dimen/_5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_ticks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/greentick"
+                />
+            <TextView
+                android:id="@+id/seen_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29 July 20"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/_9sp"
+                android:textColor="@color/Gray"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_toRightOf="@+id/iv_ticks"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <RelativeLayout
+            android:id="@+id/rl_reciver"
+            android:layout_width="match_parent"
+            android:padding="@dimen/_5dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_border"
+            android:layout_margin="@dimen/_5dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_30dp"
+                android:id="@+id/iv_profile_reciver"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/no_image"
+                android:layout_height="@dimen/_30dp">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+            <TextView
+                android:id="@+id/tv_msg_reciver"
+                android:layout_width="wrap_content"
+                android:layout_toLeftOf="@id/iv_profile_reciver"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_7dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sp"
+                android:layout_marginRight="@dimen/_10dp" />
+
+            <FrameLayout
+                android:id="@+id/fl_button_reciver"
+                android:layout_centerInParent="true"
+                android:background="@drawable/next_button"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_15dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_width="140dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/rl_button_reciver">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/call"
+                        android:layout_toLeftOf="@+id/btn_callnow"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_50dp"
+                        app:tint="@color/white" />
+
+                    <Button
+                        android:id="@+id/btn_callnow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/callnow"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:layout_marginRight="@dimen/_40dp"
+                        android:background="@color/transparent"
+                        android:textColor="@color/white"/>
+                </RelativeLayout>
+            </FrameLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_msg_reciver"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/_10dp"
+                android:paddingLeft="@dimen/_5dp"
+                android:paddingBottom="@dimen/_5dp"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_ticks_reciver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_3dp"
+                    android:src="@drawable/greentick"
+                    />
+                <TextView
+                    android:id="@+id/seen_time_reciver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="29 July 20"
+                    android:textSize="@dimen/_9sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_toRightOf="@+id/iv_ticks_reciver"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

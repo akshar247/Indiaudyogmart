@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/rl_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/black">
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_30dp"
+                android:background="@color/black"
+                android:src="@drawable/ic_white_back_arrow" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/transactions"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:text="Language"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5dp"
+        android:layout_below="@+id/rl_actionbar"
+    android:id="@+id/rl_4">
+
+    <FrameLayout
+        android:id="@+id/fl_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:background="@drawable/shape_edittext"
+        >
+
+        <TextView
+            android:id="@+id/et_hindi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/hindi"
+            android:paddingLeft="@dimen/_35dp"
+            android:paddingRight="@dimen/_20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_marginVertical="@dimen/_12dp"
+            android:textSize="18dp" />
+
+        <Switch
+            android:id="@+id/switch_hindi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="@dimen/_20dp"
+             />
+
+    </FrameLayout>
+        <FrameLayout
+            android:id="@+id/fl_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@+id/fl_1"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@drawable/shape_edittext"
+            >
+
+            <TextView
+                android:id="@+id/et_gujarati"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/gujarati"
+                android:paddingLeft="@dimen/_35dp"
+                android:paddingRight="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="@dimen/_12dp"
+                android:textColorHint="@color/black"
+                android:textSize="18dp" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_gujarati"
+                android:layout_marginTop="13dp"
+
+                android:layout_marginRight="@dimen/_20dp"
+                android:layout_gravity="right"
+                android:checked="true"
+                android:layout_centerHorizontal="true"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:layout_below="@+id/fl_2"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@drawable/shape_edittext"
+            >
+
+            <TextView
+                android:id="@+id/et_english"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext_background"
+                android:hint="@string/english"
+                android:paddingLeft="@dimen/_35dp"
+                android:paddingRight="@dimen/_20dp"
+                android:layout_marginVertical="@dimen/_12dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="18dp" />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch_english"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="@dimen/_20dp"
+                android:layout_gravity="right"
+
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/iv_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/language"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

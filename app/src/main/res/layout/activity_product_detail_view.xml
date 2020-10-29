@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="3dp"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/product_cardview"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="@dimen/_20dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:text="@string/productname"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_10dp"
+
+                        android:layout_centerHorizontal="true"
+                        android:textSize="17dp"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <RelativeLayout
+                        android:id="@+id/rel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_name"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center">
+
+                        <com.indiaudyogmart.utils.AutoScrollViewPager
+                            android:id="@+id/home_top_ViewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+
+
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/product_description"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dip"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="14dp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                        <RelativeLayout
+                            android:id="@+id/rel_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            >
+                            <ImageView
+                                android:id="@+id/iv_brand"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/brand">
+
+                            </ImageView>
+                            <TextView
+                                android:id="@+id/tv_compney_name"
+                                android:text="@string/cosmetic_pv"
+                                android:textSize="12sp"
+                                android:layout_toRightOf="@+id/iv_brand"
+                                android:layout_marginLeft="7dp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rel_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:paddingLeft="5dp"
+                            android:layout_below="@+id/rel_2"
+                            >
+                            <ImageView
+                                android:id="@+id/iv_location"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/location_1">
+
+                            </ImageView>
+                            <TextView
+                                android:id="@+id/tv_loaction"
+                                android:text="@string/surat_india"
+                                android:textSize="12sp"
+                                android:layout_toRightOf="@+id/iv_location"
+                                android:layout_marginLeft="7dp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rel_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:paddingLeft="5dp"
+                            android:layout_below="@+id/rel_3"
+                            >
+                            <ImageView
+                                android:id="@+id/iv_available"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/available_location">
+
+                            </ImageView>
+                            <TextView
+                                android:id="@+id/tv_available_location"
+                                android:text="@string/available_i"
+                                android:textSize="12sp"
+                                android:layout_toRightOf="@+id/iv_available"
+                                android:layout_marginLeft="7dp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rel_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:paddingLeft="5dp"
+                            android:layout_below="@+id/rel_4"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_price"
+                                android:text="@string/ml"
+                                android:textSize="12sp"
+                                android:layout_toRightOf="@+id/iv_price"
+                                android:layout_marginLeft="7dp"
+                                android:textColor="@color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/tv_price1"
+                                android:text="@string/ml"
+                                android:textSize="12sp"
+                                android:foreground="@drawable/strike_through"
+                                android:layout_below="@+id/tv_price"
+                                android:layout_marginLeft="7dp"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            </TextView>
+                        </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:paddingLeft="5dp"
+                        android:layout_below="@+id/rel_5"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_contact"
+                            android:textSize="12sp"
+                            android:layout_toRightOf="@+id/iv_price"
+                            android:layout_marginLeft="7dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_varinet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/rel_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="@dimen/_10dp"
+                        android:layout_below="@+id/rel0"
+                        android:gravity="center"
+                        >
+
+                        <Button
+                            android:id="@+id/btn_callnow"
+                            android:layout_width="145dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/shop_button"
+                            android:text="@string/callnow"
+                            android:textColor="@color/white"
+                            android:textSize="12dp">
+
+                        </Button>
+                        <Button
+                            android:id="@+id/btn_get_price"
+                            android:layout_width="145dp"
+                            android:layout_height="35dp"
+                            android:text="@string/getletestprice"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="@dimen/_25dp"
+                            android:background="@drawable/product_button"
+                            android:textColor="@color/white"
+                            android:layout_toRightOf="@+id/btn_callnow"
+                            >
+
+                        </Button>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

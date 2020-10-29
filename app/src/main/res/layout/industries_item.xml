@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/_7dp"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="135dp"
+        android:background="@drawable/feedback_border"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/rl_industries"
+             android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image"
+                android:padding="@dimen/_3dp"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:layout_below="@id/rl_industries">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/corner_background_round"
+            android:textSize="9sp"
+            android:layout_alignParentBottom="true"
+            android:gravity="left"
+            android:text="industries"
+            android:layout_centerInParent="true"
+            android:padding="6dp"
+
+            />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

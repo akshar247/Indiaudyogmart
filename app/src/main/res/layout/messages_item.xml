@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/messagecardview"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:layout_height="75dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:background="@color/mywhite"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/rl_1"
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_company_name"
+                    android:layout_width="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="@string/companynamemessage"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_2"
+                android:layout_below="@+id/rl_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:text="@string/owner"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_3"
+                android:layout_below="@+id/rl_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_cart"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/message_cart">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/tv_manufac"
+                    android:text="@string/manufacture"
+                    android:textSize="13dp"
+                    android:layout_toRightOf="@+id/iv_cart"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_4"
+                android:layout_below="@+id/rl_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_msg"
+                    android:layout_width="wrap_content"
+                    android:text="@string/messagedetails"
+                    android:textSize="10dp"
+                    android:textColor="@color/Gray"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rel_5"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp">
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/date"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <ImageView
+                    android:id="@+id/call_img"
+                    android:layout_width="45dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_below="@+id/tv_date"
+                    android:layout_height="45dp"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/message">
+                </ImageView>
+                <TextView
+                    android:id="@+id/tv_count_message"
+                    android:layout_width="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_date"
+                    android:layout_marginTop="17dp"
+                    android:text="@string/call"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

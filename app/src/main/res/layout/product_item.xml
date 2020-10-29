@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/rl_row"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/rl_contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mywhite">
+        <ImageView
+            android:id="@+id/product_img"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/my_product_image">
+
+        </ImageView>
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/product_img"
+            android:paddingRight="20dp"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/tv_edit"
+
+            android:layout_marginLeft="8dp">
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/productname"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/product_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/productdes"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/product_name"
+                />
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textStyle="bold"
+                android:text="@string/price"
+                android:layout_below="@id/product_detail"
+
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/tv_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qty"
+                android:textStyle="bold"
+                android:layout_below="@id/tv_price"
+
+                android:textColor="@color/black"
+                />
+
+            <Switch
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/product_name"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white">
+
+            </Switch>
+
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/menu_icon"
+                android:visibility="gone"
+                android:id="@+id/menu"
+                app:tint="@color/Gray" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="50dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:background="@drawable/black_button"
+            android:layout_marginRight="@dimen/_10dp"
+            android:text="@string/edit">
+
+        </TextView>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dip"
+        android:background="@color/transparent"
+        android:layout_below="@id/rl_contain">
+
+    </View>
+</RelativeLayout>

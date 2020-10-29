@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dip"
+    tools:context=".activity.AllCityActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_location">
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40dp"
+            android:hint="@string/searchcity"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_background"
+            android:paddingLeft="@dimen/_15dp"
+            android:imeOptions="actionSearch"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:lines="1"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray" />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="17dp"
+            android:visibility="gone"
+            android:text="@string/nocityfound">
+
+        </TextView>
+    </FrameLayout>
+
+</LinearLayout>

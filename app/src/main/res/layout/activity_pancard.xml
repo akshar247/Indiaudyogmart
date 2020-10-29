@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:id="@+id/pan_info"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Pan Name :"
+            android:layout_below="@+id/tv_number"
+            android:textSize="15sp"
+            android:id="@+id/tv_ifsc"
+            android:textColor="@color/Gray"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            />
+        <EditText
+
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/et_anumber"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/_12sp"
+            android:background="@drawable/kyc_background"
+            android:layout_marginRight="@dimen/_10dp"
+            android:id="@+id/et_ifsc"
+            android:textColorHint="@color/Gray"
+            android:padding="5dp"
+            android:hint="Enter Pan Name"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Pan Number :"
+            android:layout_below="@+id/tv_ifsc"
+            android:textSize="15sp"
+            android:id="@+id/tv_cheque"
+            android:textColor="@color/Gray"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            />
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/et_ifsc"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/_12sp"
+
+            android:background="@drawable/kyc_background"
+            android:layout_marginRight="@dimen/_10dp"
+            android:id="@+id/sp_cheque"
+            android:textColorHint="@color/Gray"
+            android:padding="5dp"
+            android:hint="Enter Pan Number"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Pan Image :"
+            android:layout_below="@+id/tv_cheque"
+            android:textSize="15sp"
+            android:textColor="@color/Gray"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginLeft="@dimen/_20dp"
+            />
+
+        <FrameLayout
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/sp_cheque"
+            android:layout_marginRight="@dimen/_10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/kyc_background">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/Gray"
+                android:textSize="13sp"
+                android:padding="5dp"
+                android:hint="Please Choose Image">
+
+            </TextView>
+            <TextView
+                android:id="@+id/btn_upload_video"
+                android:layout_width="65dip"
+                android:layout_height="30dip"
+                android:layout_gravity="right"
+                android:text="Browse"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/kyc_background1">
+
+            </TextView>
+        </FrameLayout>
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_panimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pan_info"
+        android:layout_margin="10dip">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/btn_send_pancard_req"
+        android:layout_width="@dimen/_200dp"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:text="SEND REQUEST"
+        android:textColor="@color/white"
+        android:layout_below="@+id/rv_panimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30dp"/>
+</RelativeLayout>

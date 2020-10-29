@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_main"
+        android:background="@color/mywhite"
+        android:padding="@dimen/_5dp">
+
+        <TextView
+            android:id="@+id/require_de"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_13sp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginLeft="@dimen/_8dp"
+            android:text="@string/required_de">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_marginTop="@dimen/_2dp"
+            android:textStyle="bold"
+            android:layout_below="@id/require_de"
+            android:layout_marginLeft="@dimen/_8dp"
+            android:text="">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tv_massage"
+            android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:lineSpacingExtra="@dimen/_5dp"
+            android:textSize="14dp"
+            android:layout_below="@id/tv_product_name"
+            android:layout_marginLeft="@dimen/_8dp"
+            android:text="I want to buy Direct orange dyes. Kindly send me price and other details.">
+
+        </TextView>
+        <TextView
+            android:id="@+id/qty"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:layout_below="@id/tv_massage"
+            android:layout_marginLeft="@dimen/_8dp"
+            android:text="@string/quantity">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tv_qty"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:layout_toRightOf="@id/qty"
+            android:layout_below="@id/tv_massage"
+            android:layout_marginLeft="2dp"
+            android:text="55 KGs">
+
+        </TextView>
+        <TextView
+            android:id="@+id/require_for"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:layout_below="@id/qty"
+            android:layout_marginLeft="@dimen/_8dp"
+            android:text="@string/requirement_for">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tv_requirement_for"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:layout_toRightOf="@id/require_for"
+            android:layout_below="@id/tv_qty"
+            android:layout_marginLeft="2dp"
+            android:text="Buisness Type">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tv_poston"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/_50dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_requirement_for"
+            android:text="Posted on "/>
+        <TextView
+            android:id="@+id/tv_post_date"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/_15dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_requirement_for"
+            android:layout_marginLeft="@dimen/_8dp"
+            android:text=""/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35dp"
+            android:textColor="@color/white"
+            android:layout_below="@id/tv_post_date"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_5dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shop_button"
+            android:text="@string/repost"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="@dimen/_35dp"
+        android:gravity="center"
+        android:text="@string/listofsuppliers"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_10dp"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:id="@+id/tv_supplier"
+        android:layout_below="@+id/rl_main"
+        android:background="@drawable/supplier_background"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/requirement_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_supplier"
+        android:layout_marginTop="@dimen/_10dp"
+        />
+
+</LinearLayout>

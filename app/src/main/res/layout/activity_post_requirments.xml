@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/tv_requirement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_25dp"
+        android:layout_marginEnd="@dimen/_25dp"
+        android:text="@string/searchandfindbase"
+        />
+    <FrameLayout
+        android:id="@+id/fl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30dp"
+        android:layout_marginEnd="@dimen/_30dp"
+        android:layout_marginTop="@dimen/_70dp"
+        android:layout_below="@+id/tv_requirement"
+        android:background="@drawable/button_requirement"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <AutoCompleteTextView
+                android:id="@+id/et_search1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40dp"
+                android:hint="@string/enterproductname"
+                android:layout_centerVertical="true"
+                android:background="@drawable/edittext_background"
+                android:paddingLeft="@dimen/_20dp"
+                android:textSize="12dp"
+                android:paddingRight="@dimen/_20dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <ImageView
+                android:id="@+id/iv33"
+                android:layout_width="@dimen/_15dp"
+                android:src="@drawable/voice"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_20dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginTop="@dimen/_5dp"
+                android:tint="@color/Gray">
+            </ImageView>
+        </RelativeLayout>
+    </FrameLayout>
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:text="@string/next"
+        android:textSize="20dp"
+        android:background="@drawable/next_button"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_40dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/fl_1"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/iv_3"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/btn_next"
+        android:src="@drawable/requirements"/>
+
+</RelativeLayout>
