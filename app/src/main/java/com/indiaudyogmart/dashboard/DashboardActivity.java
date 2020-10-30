@@ -28,6 +28,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
+import androidx.core.widget.NestedScrollView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -89,6 +90,7 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DashboardActivity extends AppCompatActivity {
@@ -102,6 +104,8 @@ public class DashboardActivity extends AppCompatActivity {
     CircleImageView iv_profileimage;
     @BindView(R.id.iv_cart)
     ImageView iv_cart;
+    @BindView(R.id.btn_postreqimnet)
+    Button btnPostreqimnet;
     @BindView(R.id.nav_view)
     NavigationView nvView;
     @BindView(R.id.navbottom)
@@ -114,6 +118,8 @@ public class DashboardActivity extends AppCompatActivity {
     FrameLayout fl_1;
     @BindView(R.id.tv_cityname)
     TextView tv_cityname;
+    @BindView(R.id.ns_main)
+    NestedScrollView frag;
     ImageView iv_image;
     TextView tv_name;
     TextView tv_number;
@@ -163,7 +169,19 @@ public class DashboardActivity extends AppCompatActivity {
 
     private void init() {
         ButterKnife.bind(this);
-
+        btnPostreqimnet.setVisibility(View.GONE);
+        frag.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if (scrollY > oldScrollY) {
+                    meo.setVisibility(View.GONE);
+                    btnPostreqimnet.setVisibility(View.VISIBLE);
+                } else {
+                    meo.setVisibility(View.VISIBLE);
+                    btnPostreqimnet.setVisibility(View.GONE);
+                }
+            }
+        });
         if (CommonFunctions.getloginresponse(DashboardActivity.this).data.roleid == 1)
         {
             nvView.inflateMenu(R.menu.buyer_drawer_menu);
@@ -175,7 +193,6 @@ public class DashboardActivity extends AppCompatActivity {
         setupDrawerContent(nvView);
 
 
-
         iv_image = nvView.getHeaderView(0).findViewById(R.id.iv_image);
         tv_name = nvView.getHeaderView(0).findViewById(R.id.tv_name);
         tv_number = nvView.getHeaderView(0).findViewById(R.id.tv_number);
@@ -185,7 +202,7 @@ public class DashboardActivity extends AppCompatActivity {
         // loadFragment(new HomeFragment());
 
         meo.add(new MeowBottomNavigation.Model(ID_HOME, R.drawable.ic_home_bottom));
-        meo.add(new MeowBottomNavigation.Model(ID_MESSAGE, R.drawable.ic_username));
+        meo.add(new MeowBottomNavigation.Model(ID_MESSAGE, R.drawable.ic_postrequirement_4));
         meo.add(new MeowBottomNavigation.Model(ID_PAYNOW, R.drawable.ic_bid));
         /*meo.setCount(ID_MESSAGE, "115");*/
 
@@ -205,9 +222,10 @@ public class DashboardActivity extends AppCompatActivity {
                         break;
                     case ID_MESSAGE:
                         if (CommonFunctions.getloginresponse(DashboardActivity.this).data.roleid == 1)
-                            fragmentClass = UserProfileFragment.class;
+                            fragmentClass = PostRequirments.class;
                         else
-                            fragmentClass = UserProfileFragment.class;
+                            fragmentClass = PostRequirments.class;
+
                         break;
                     case ID_PAYNOW:
                         if (CommonFunctions.getloginresponse(DashboardActivity.this).data.roleid == 1)
@@ -256,9 +274,9 @@ public class DashboardActivity extends AppCompatActivity {
                             break;
                         case ID_MESSAGE:
                             if (CommonFunctions.getloginresponse(DashboardActivity.this).data.roleid == 1)
-                                fragmentClass = UserProfileFragment.class;
+                                fragmentClass = PostRequirments.class;
                             else
-                                fragmentClass = UserProfileFragment.class;
+                                fragmentClass = PostRequirments.class;
                             break;
                         case ID_PAYNOW:
                             if (CommonFunctions.getloginresponse(DashboardActivity.this).data.roleid == 1)
@@ -306,6 +324,8 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 drawer.openDrawer(GravityCompat.START);
+                btnPostreqimnet.setVisibility(View.GONE);
+
             }
         });
         tv_edit.setOnClickListener(new View.OnClickListener() {
@@ -547,10 +567,7 @@ public class DashboardActivity extends AppCompatActivity {
                 fragmentClass = IndustriesFragment.class;
                 break;
             case R.id.nav_requirements:
-                if (CommonFunctions.getloginresponse(DashboardActivity.this).data.roleid == 1) {
-                    Intent re = new Intent(DashboardActivity.this, PostRequirments.class);
-                    startActivity(re);
-                }
+                fragmentClass = PostRequirments.class;
                 break;
         /*    case R.id.nav_requirements:
                 *//*loadFragment(new IndustriesFragment());*//*
@@ -909,5 +926,16 @@ public class DashboardActivity extends AppCompatActivity {
             return false;
         }
     };*/
+ @OnClick(R.id.btn_postreqimnet)
+ public void sendpostreqiment() {
+     try {
+                 if (CommonFunctions.getloginresponse(DashboardActivity.this).data.roleid == 1) {
+                 loadFragment(new PostRequirments());
+                 }
+
+         } catch(Exception e){
+             e.printStackTrace();
+         }
+     }
 
 }

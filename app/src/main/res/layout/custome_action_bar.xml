@@ -73,6 +73,7 @@
             android:layout_height="@dimen/_30dp"
             android:layout_toRightOf="@id/iv_cart"
             android:src="@drawable/circle_img"
+            android:visibility="gone"
             android:background="@drawable/circle_image"
             android:layout_marginLeft="@dimen/_10dp"
             />

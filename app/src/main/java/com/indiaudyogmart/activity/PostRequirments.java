@@ -1,9 +1,8 @@
 package com.indiaudyogmart.activity;
 
 import android.Manifest;
-import android.content.Context;
+import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -13,7 +12,9 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
@@ -23,7 +24,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -36,7 +39,6 @@ import com.indiaudyogmart.config.Constants;
 import com.indiaudyogmart.config.IndiaMartConfig;
 import com.indiaudyogmart.fragment.SearchFragment;
 import com.indiaudyogmart.model.LoginResponse;
-import com.indiaudyogmart.utils.LocaleHelper;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -50,14 +52,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class PostRequirments extends AppCompatActivity {
+public class PostRequirments extends Fragment {
 
     String lang;
     @BindView(R.id.tv_requirement)
@@ -75,38 +75,43 @@ public class PostRequirments extends AppCompatActivity {
     private static final int TRIGGER_AUTO_COMPLETE = 100;
     private static final long AUTO_COMPLETE_DELAY = 300;
     private Handler handler;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    View rootView;
 
 
-        lang = CommonFunctions.getPreference(this, Constants.defalt_languge, "en");
-        Locale locale = new Locale(lang);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-
-        setContentView(R.layout.activity_post_requirments);
+        rootView = inflater.inflate(R.layout.activity_post_requirments, container, false);
         init();
+        return rootView;
 
-    }
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        //super.attachBaseContext(newBase);
-        lang = CommonFunctions.getPreference(newBase, Constants.defalt_languge, "en");
-        super.attachBaseContext(LocaleHelper.onAttach(newBase, lang));
-        Locale locale = new Locale(lang);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
     private void init() {
         try {
+            ButterKnife.bind(this, rootView);
+            btnNext.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        if (CommonFunctions.checkConnection(getActivity())) {
+                        if (TextUtils.isEmpty(text.getText().toString())) {
+                            Toast.makeText(getActivity(),R.string.error_post,Toast.LENGTH_SHORT).show();
+                            text.requestFocus();
+                            return;
+                        }
+                        else
+                        {
+                            Intent next=new Intent(getActivity(),WantRequirment.class);
+                            next.putExtra(Constants.name,text.getText().toString());
+                            startActivity(next);
+                        }
+                    }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 
-            ButterKnife.bind(this);
+                }
+            });
+
             micc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -117,7 +122,7 @@ public class PostRequirments extends AppCompatActivity {
                     }
                 }
             });
-            text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            text.setOnEditorActionListener(new AutoCompleteTextView.OnEditorActionListener() {
                 public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                     if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                         Log.i("", "Here you can write the code");
@@ -129,7 +134,7 @@ public class PostRequirments extends AppCompatActivity {
                                 bundle.putString(Constants.search_term,v.getText().toString());
                                 searchFragment.setArguments(bundle);
                                 text.setText("");
-                                CommonFunctions.hideSoftKeyboard(PostRequirments.this,text);
+                                CommonFunctions.hideSoftKeyboard(getActivity(),text);
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -139,7 +144,8 @@ public class PostRequirments extends AppCompatActivity {
                     return false;
                 }
             });
-            autoSuggestAdapter = new AutoCompleteAdapter(this,
+
+            autoSuggestAdapter = new AutoCompleteAdapter(getActivity(),
                     android.R.layout.simple_dropdown_item_1line);
             text.setThreshold(2);
             text.setAdapter(autoSuggestAdapter);
@@ -191,7 +197,7 @@ public class PostRequirments extends AppCompatActivity {
 
     private void openmic() {
         try {
-            Dexter.withContext(this)
+            Dexter.withContext(getActivity())
                     .withPermission(Manifest.permission.RECORD_AUDIO)
                     .withListener(new PermissionListener() {
 
@@ -228,10 +234,10 @@ public class PostRequirments extends AppCompatActivity {
 
     private void getdata(String search) {
         try {
-            if(CommonFunctions.checkConnection(this))
+            if(CommonFunctions.checkConnection(getActivity()))
             {
             //    CommonFunctions.createProgressBar(this, getString(R.string.msg_please_wait));
-                LoginResponse loginResponse = CommonFunctions.getloginresponse(this);
+                LoginResponse loginResponse = CommonFunctions.getloginresponse(getActivity());
                 String url = IndiaMartConfig.WEBURL + IndiaMartConfig.search_product_wyw+search;
                 Map<String, String> mParams = new HashMap<>();
                 Log.e("url", url);
@@ -272,7 +278,7 @@ public class PostRequirments extends AppCompatActivity {
                     public void onError(ANError anError) {
                         try {
                             CommonFunctions.destroyProgressBar();
-                            Toast.makeText(PostRequirments.this, R.string.msg_server_error, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), R.string.msg_server_error, Toast.LENGTH_SHORT).show();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -284,15 +290,30 @@ public class PostRequirments extends AppCompatActivity {
         }
     }
 
-    @OnClick(R.id.btn_next)
-    public void onViewClicked() {
-        try {
-            Intent next=new Intent(this,WantRequirment.class);
-            next.putExtra(Constants.name,text.getText().toString());
-            startActivity(next);
-            finish();
-        } catch (Exception e) {
-            e.printStackTrace();
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case Constants.RECOGNIZER_REQ_CODE:
+
+                if (resultCode == Activity.RESULT_OK && null != data) {
+
+
+                    try {
+                        String search_term = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0);
+                        text.setText(search_term+"");
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
+                }
+                break;
+
         }
     }
 }

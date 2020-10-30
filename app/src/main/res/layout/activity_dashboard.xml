@@ -59,15 +59,24 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/frag"
         android:orientation="vertical">
         <include layout="@layout/custome_action_bar"
             android:id="@+id/include_action_bar"/>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/ns_main"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/include_action_bar"
+            android:layout_height="wrap_content">
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_above="@+id/navbottom"
-            android:layout_below="@+id/include_action_bar"
             android:layout_height="match_parent" />
+
+        </androidx.core.widget.NestedScrollView>
+
         <com.etebarian.meowbottomnavigation.MeowBottomNavigation
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,6 +91,7 @@
             android:background="@color/white"
             app:mbn_selectedIconColor="@color/white"
             app:mbn_shadowColor="#1f212121"/>
+
     </RelativeLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -94,11 +104,23 @@
          />
 
 
-
 </androidx.drawerlayout.widget.DrawerLayout>
 
 
-
+    <Button
+        android:id="@+id/btn_postreqimnet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/postrequriment"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/action_bar_bg1"
+        app:icon="@android:drawable/ic_input_add"
+        android:textColor="@color/white"
+        android:padding="10dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 

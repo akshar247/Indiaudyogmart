@@ -26,7 +26,6 @@ import com.indiaudyogmart.R;
 import com.indiaudyogmart.config.CommonFunctions;
 import com.indiaudyogmart.config.Constants;
 import com.indiaudyogmart.config.IndiaMartConfig;
-import com.indiaudyogmart.dashboard.DashboardActivity;
 import com.indiaudyogmart.model.LoginResponse;
 import com.indiaudyogmart.utils.LocaleHelper;
 
@@ -189,10 +188,6 @@ public class WantRequirment extends AppCompatActivity {
                 } else if (TextUtils.isEmpty(etApproxValue.getText().toString())) {
                     Toast.makeText(this, R.string.error_approx, Toast.LENGTH_SHORT).show();
                     etApproxValue.requestFocus();
-                    return;
-                }  else if (TextUtils.isEmpty(etBuyingDetails.getText().toString())) {
-                    Toast.makeText(this, R.string.error_detail, Toast.LENGTH_SHORT).show();
-                    etBuyingDetails.requestFocus();
                     return;
                 }
                 else if (TextUtils.isEmpty(tv_country_val.getText().toString())) {

@@ -110,7 +110,7 @@
                 android:layout_below="@id/tv_d4"
                 android:layout_marginRight="@dimen/_10dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="@dimen/_16sp"
+                android:layout_marginTop="@dimen/_10sp"
                 android:text="@string/view_more"
                 android:textColor="@color/Orange"
                 android:textStyle="bold"
